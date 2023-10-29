@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3RI</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" integrity="sha512-rOTVxSYNb4+/vo9pLIcNAv9yQVpC8DNcFDWPoc+gTv9SLu5H8W0Dn7QA4ffLHKA0wysdo6C5iqc+2LEO1miAow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+{% block header %}
+<div class="header">
+<img src="{% static 'images/threeRI.png' %}" style="margin-left:20px; width:200px;">
+
+<h3>Hello Pramod</h3>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="nav justify-content-center">
+      <li class="nav-item ">
+        <a class="nav-link text-light " href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'about' %}">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'contact' %}">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'course' %}">Course offered</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'signup' %}">Sign up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'signin' %}">Sign in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'signin' %}">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+{% endblock %}
+{% block content %}
+<div class="content" style="height:100%;display: flex; flex-direction: column;">
+
+    <div class="box1" style=" box-sizing: border-box; padding: 5px;height:400px; width:100%; display:flex; justify-content: space-evenly; align-item: center; ">
+      <div style="height: 400px; width:350px;  box-sizing: border-box; padding:10px; ">
+        <img src="{% static 'images/image1.jpg' %}" style="border-radius:10px;height: 370px; width:350px">
+      </div>
+      <div style="height: 400px; width:350px;  box-sizing: border-box; padding:10px;">
+        <img src="{% static 'images/image2.jpg' %}" style="border-radius:10px;height: 370px; width:350px;">
+      </div>
+      <div style="height: 400px; width:350px;  box-sizing: border-box; padding:10px;">
+        <img src="{% static 'images/image3.jpg' %}" style="border-radius:10px;height: 370px; width:350px;">
+      </div>
+      <div style="height: 400px; width:350px;  box-sizing: border-box; padding:10px;">
+        <img src="{% static 'images/image4.jpg' %}" style="border-radius:10px;height: 370px; width:350px;">
+      </div>
+    </div>
+    <div class="box2" style="font-size:20px; padding:15px; background-color: lightgray; border-box: height:200px; width:100%; display: flex; justify-content: center; align-item: center;">
+      <div style=" padding:20px; border-right:1px solid black; height:200px; display: flex; flex-direction:column; justify-content: space-between;">
+        <h3>Industry Expert Trainers</h3>
+        <p >Highly Qualified and Industry <br>Experience Professionals for providing <br>Real-Time Scenario-Based Training.</p>
+      </div>
+      <div style="padding:20px; border-right:1px solid black; height:200px; display: flex; flex-direction:column; justify-content: space-between;">
+        <h3 >Flexible Batches</h3>
+        <p >Multiple Batches & Support Systems to make <br>sure you can learn according to your convenience.</p>
+      </div>
+      <div style="padding:20px; height:200px; display: flex; flex-direction:column; justify-content: space-between;">
+        <h3>100% Placement Assistance</h3>
+        <p >After Training Completion, we provide Job Assistance, <br>Scheduled Interview for every Individual.</p>
+      </div>
+    </div>
+    <div style="height:350px; display:flex; justify-content:center;">
+      <div style="width:40%; margin-top:22px;">
+        <img src="{% static 'images/image8.jpg' %}" style="width:280px; height:300px; border-radius:15px;position:absolute; left:25%;z-index:1; ">
+      </div>
+      <div style="width:60%;">
+          <div style="margin-top:20px; padding:10px;">
+            <h1>India’s Best Professional</h1>
+            <h2>IT-Training Institute</h2>
+            <p style="font-size:20px;">3RI Technologies is a Leading Professional IT- Training Provider Institute for Software Development Courses since 2010.<br>It is one of best Training Institute which provides High-Quality Industry Level Training with Real Time Projects.
+              <br>We are known as one of the best IT Training Institutes in India with a clear vision of imparting Quality <br>Education & Training among students Since 2010.
+            </p>
+            <button style="width:150px; height:40px; background-color:orange; border:2px solid white; border-radius:5px;"><a href="#" style="color:white;">Learn more</a></button>
+          </div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; width:100%; padding:20px;">
+      <div style=" border-bottom:3px solid orange; margin-left:20%;margin-right:20%;text-align:center">
+        <h1>Job Oriented Programs</h1>
+      </div>
+      <div style="margin-top:20px; display:flex; justify-content:space-evenly;">
+          <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image2.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mastering in Data science</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="{% url 'datascience' %}" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image7.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blockchain Training</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image4.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Python development</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="{% url 'python' %}" class="btn btn-primary">Read somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image5.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Selenium with Python</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+    </div>
+      <div style="display:flex; flex-direction:column; width:100%; padding:20px; margin-top:10px;">
+      <div style=" border-bottom:3px solid orange; margin-left:20%;margin-right:20%;text-align:center">
+        <h1>Most Popular Courses</h1>
+      </div>
+      <div style="margin-top:20px; display:flex; justify-content:space-evenly;">
+          <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image5.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Selenium with Python</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image6.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Data science with python stats</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image3.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tableau Training</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'images/image4.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Python development</h5>
+          <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+<div class="footer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;  margin-top:20px;">
+  <div style="padding:10px">
+  <h1>Our Clients</h1>
+  </div>
+  <div>
+    <img src="{% static 'images/f1.png' %}" style="height:150px; width:150px;">
+    <img src="{% static 'images/f2.png' %}" style="height:150px; width:150px;">
+    <img src="{% static 'images/f3.png' %}" style="height:150px; width:150px;">
+    <img src="{% static 'images/f6.png' %}" style="height:150px; width:150px;">
+    <img src="{% static 'images/f5.png' %}" style="height:120px; width:150px;">
+    <img src="{% static 'images/f7.png' %}" style="height:120px; width:150px;">
+  </div>
+  <div style="display:flex; width:100%; background-color:#071b66; color:white;">
+      <div style="width:40%; display:flex; flex-direction:column; text-align:center; padding:20px; margin:20px">
+        <div>
+            <h1 style="font-weight:600;"><span style="color:orange">3RI</span>Technologies</h1>
+        </div>
+        <div style="margin-top:15px">
+          <div style="color:white; font-size:30px">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div>
+              <p><i class="fa-solid fa-phone"></i> +91-8308103366</p>
+              <p><i class="fa-solid fa-phone"></i> +91-9552560215</p>
+              <p><i class="fa-solid fa-envelope"></i> enquiry@3ritechnologies.com</p>
+            </div>
+            <div>
+              <p>3RI technologies Pvt Ltd.</p>
+              <p><i class="fa-regular fa-copyright"></i> 2023 all rights reserved.</p>
+            </div>
+          </div>
+      </div>
+      <div style="width:60%; font-size:25px">
+        <div style="margin:30px;">
+          <button type="button" class="btn btn-outline-light" style="font-size:25px;">Popular Courses</button>
+          <button type="button" class="btn btn-outline-light" style="font-size:25px; margin-left:20px;">Trending courses</button>
+          <button type="button" class="btn btn-outline-light" style="font-size:25px; margin-left:20px;">Job Oriented Courses</button>
+        </div>
+        <div style="">
+            <div class="container" style="font-size:25px;  ">
+              <div class="row" style="margin-top:20px; border-bottom:1px solid white">
+                <div class="col-2">
+                    <h5>COMPANY</h5>
+                </div>
+                <div class="col-9">
+                  <div class="col">
+                    <p>About us | Hire from us | Blog | Accreditations | Download brochure</p>
+                  </div>
+                  <div class="col">
+                    <p>Placements | Become an instructor | Career </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style=" margin-top:20px">
+                <div class="col-2">
+                    <h5>SUPPORT</h5>
+                </div>
+                <div class="col-9">
+                  <div class="col">
+                    <p>Contact us | Career | Book an Appointment | Terms & Conditions </p>
+                  </div>
+                  <div class="col">
+                    <p>Refund Policy | Write to us | Sitemap</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" integrity="sha512-rOTVxSYNb4+/vo9pLIcNAv9yQVpC8DNcFDWPoc+gTv9SLu5H8W0Dn7QA4ffLHKA0wysdo6C5iqc+2LEO1miAow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div style=" width:100%; padding:20px; text-align:center; display: flex; flex-direction:column; ">
+  <div style="width:100%; padding:20px; text-align:center; border-bottom: 2px solid black;">
+  <h1>Courses offered</h1>
+  </div>
+  <div style=" width:100%; padding:20px; text-align:center; display: flex; justify-content: space-around; margin-top:15px;">
+  <div class="card text-white bg-secondary" style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image4.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Python full stack development</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'python' %}" class="btn btn-primary">Read more..</a>
+  </div>
+  </div>
+  <div class="card text-white bg-secondary" style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image2.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Mastering in Data Science</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'datascience' %}" class="btn btn-primary">Read more..</a>
+  </div>
+</div>
+  <div class="card text-white bg-secondary" style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image3.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Tableau training</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Read more..</a>
+  </div>
+  </div>
+  </div>
+  <div style=" width:100%; padding:20px; text-align:center; display: flex; justify-content: space-around; margin-top:15px;">
+  <div class="card text-white bg-secondary" style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image5.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Selenium with python</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'selenium' %}" class="btn btn-primary">Read more..</a>
+  </div>
+</div>
+  <div class="card text-white bg-secondary" style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image6.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Data science with python & stats</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Read more..</a>
+  </div>
+</div>
+  <div class="card text-white bg-secondary " style="width: 27rem; height:30rem;">
+  <img class="card-img-top" src="{% static 'images/image7.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Blockchain Training</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'blockchain' %}" class="btn btn-primary">Read more..</a>
+  </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

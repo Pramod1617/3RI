@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div style="">
+    <div style="display:flex;background-color:#071b66; color:white; font-size:25px">
+        <div style="width:40%; display:flex; flex-direction:column; align-item:center; justify-content:center; text-align:left; padding:20px;margin:5%;">
+            <h1 style="margin-left:20px">Contact Us</h1>
+            <p style="margin-left:20px; margin-top:15px; text-align:justify">Get In touch with us - We like to hear from you</p>
+        </div>
+        <div style=" width:60%; display:flex; flex-direction:column">
+            <div style="height:50%;text-align:center;">
+                <img style="height:250px; width:500px" src="https://cdn-bncgp.nitrocdn.com/vngtyHsLEGmVYxQNDkUTxvrsCPnUheWZ/assets/images/optimized/rev-9823182/www.3ritechnologies.com/wp-content/uploads/2020/12/face-5-min.jpg">
+            </div>
+            <div style="height:50%;text-align:center;">
+                <img style="height:250px; width:500px" src="{% static 'images/image10.jpg' %}">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style=" display: flex; justify-content: space-around; padding:20px;">
+    <div style=" display: flex; flex-direction: column; height:100%; width:50%; ">
+        <div style="text-align: center; border-bottom:2px solid black;">
+        <h1>Contact us</h1>
+        </div>
+        <div style="display:flex; justify-content: space-between; margin-top:15px">
+            <h3>telephone</h3>
+            <h3>Whatsapp</h3>
+            <h3>Address</h3>
+        </div>
+        <div style="display:flex; justify-content: space-between; padding-top:20px">
+            <div>
+            <p>+91 830 810 3366 /</p>
+            <p>+91 830 810 3366 /</p>
+            <p>+91 830 810 3366 /</p>
+            </div>
+            <div>
+            <button class="btn btn-outline-success">Chat now</button>
+
+            </div>
+            <div style="width:15%">
+            <p>3RI Technologies Pvt Ltd.
+                405 - 4th Floor, Rainbow Plaza, Pimple Saudagar, Pune - 411017
+                +91 8308103366
+            </p>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div style=" background-color: lightblue; padding:25px; border-radius:10px;">
+        <div style="border-bottom:2px solid black;">
+            <h1>Get in touch with us</h1>
+        </div>
+        <div style="font-size:20px; margin: 15px; display:flex; flex-direction: column;  justify-content:center; align-item:center;">
+            <form method="post" style="display:flex; flex-direction: column;">
+            {% csrf_token %}
+            {{visitor}}
+                <br>
+            <input class="btn btn-primary" type="submit">
+            </form>
+        </div>
+    </div>
+    </div>
+    <div style="display:flex; justify-content:space-around; margin-top:20px">
+        <div>
+            <h1>PIMPLE SAUDAGAR BRANCH</h1><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d484246.5311598224!2d73.845091!3d18.520946!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0791d6cbedf%3A0xf45a2bfcb2e34b2d!2s3RI%20Deccan%20-%20Data%20Analytics%2C%20PowerBI%2C%20DevOps%2C%20Python%2C%20Java%2C%20Testing%20Training%20Institute!5e0!3m2!1sen!2sus!4v1698315780146!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+            <h1>DECCAN BRANCH</h1><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d484033.56163729186!2d73.788199!3d18.596018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b918d52fc913%3A0x7d4a29f1c1d5e713!2s3RI%20Technologies!5e0!3m2!1sen!2sus!4v1698315724915!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
