@@ -16,10 +16,11 @@
 {% block header %}
 <div class="header">
 <img src="{% static 'images/threeRI.png' %}" style="margin-left:20px; width:200px;">
-
-<h3>Hello Pramod</h3>
+{% if request.user.is_authenticated %}
+         <h3>Hello {{user.username}}</h3>
+  {% endif %}
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary " style="font-size:25px">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -42,12 +43,16 @@
       <li class="nav-item">
         <a class="nav-link text-light" href="{% url 'signup' %}">Sign up</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="{% url 'signin' %}">Sign in</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="{% url 'signin' %}">Sign out</a>
-      </li>
+
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a  class="nav-link text-light" href="{% url 'signout' %}">Sign out</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link text-light" href="{% url 'signin' %}">Sign in</a>
+        </li>
+      {% endif %}
     </ul>
   </div>
 </nav>
@@ -126,7 +131,7 @@
         <div class="card-body">
           <h5 class="card-title">Python development</h5>
           <p class="card-text">Learn the most popular tools in Analytics with LIVE Case Studies from the Leading Software Training Institute.</p>
-          <a href="{% url 'python' %}" class="btn btn-primary">Read somewhere</a>
+          <a href="{% url 'python' %}" class="btn btn-primary">Read more</a>
         </div>
       </div>
       <div class="card" style="width: 20rem;">
@@ -156,7 +161,7 @@
         <div class="card-body">
           <h5 class="card-title">Data science with python stats</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Read more</a>
         </div>
       </div>
       <div class="card" style="width: 20rem;">
@@ -266,5 +271,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" integrity="sha512-rOTVxSYNb4+/vo9pLIcNAv9yQVpC8DNcFDWPoc+gTv9SLu5H8W0Dn7QA4ffLHKA0wysdo6C5iqc+2LEO1miAow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
 </body>
 </html>
